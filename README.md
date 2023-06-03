@@ -204,7 +204,7 @@ These are the results:
 
 **7. References:**
 
-[1] Kartick Chandra Mondal, Moumita Ghosh, Rohmatul Fajriyah, Anirban Roy<a name="_hlk135867462"></a> (2022) **·** Introducing Suffix Forest for Mining Tri-clusters from Time Series Data [Link]
+[1] Kartick Chandra Mondal, Moumita Ghosh, Rohmatul Fajriyah, Anirban Roy<a name="_hlk135867462"></a> (2022) **·** Introducing Suffix Forest for Mining Tri-clusters from Time Series Data [[Link](https://link.springer.com/article/10.1007/s11334-022-00489-9)]
 
 [2] <a name="_hlk135867581"></a>Kartick Chandra Mondal, Nicolas Pasquier, Anirban Mukhopadhyay, Ujjwal Maulik, and Sanghamitra Bandhopadyay <a name="_hlk135867504"></a>(2012<a name="_hlk135867594"></a>) **·** A New Approach for Association Rule Mining and Bi-clustering Using Formal Concept Analysis [[Link](https://link.springer.com/chapter/10.1007/978-3-642-31537-4_8)]
 

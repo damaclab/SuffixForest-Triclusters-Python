@@ -1,5 +1,3 @@
-﻿Page | **2**
-
 **USER GUIDE**
 
 Tri-clustering is a popular technique in data mining that can be used to uncover interesting patterns, association rules and relationships in large datasets. However, these techniques are often computationally expensive and can be challenging to apply to large datasets.
@@ -126,14 +124,14 @@ The prototype and description of this method is given below.
 | :-: |
 
 
-|def process(<br>`                  `min\_support\_percentage\_number\_table: float = 0.0,<br>`                  `min\_support\_count: int = 1,<br>`                  `min\_confidence: float = 0.0,<br>`                  `produce\_intermediate\_imgs: bool = False,<br>`                  `produce\_final\_img: bool = False,<br>`                  `custom\_name\_mapping: Any | None = None,<br>`                  `dtype\_key: Any | None = None<br>`                `) -> None|
+def process(<br>`                  `min\_support\_percentage\_number\_table: float = 0.0,<br>`                  `min\_support\_count: int = 1,<br>`                  `min\_confidence: float = 0.0,<br>`                  `produce\_intermediate\_imgs: bool = False,<br>`                  `produce\_final\_img: bool = False,<br>`                  `custom\_name\_mapping: Any | None = None,<br>`                  `dtype\_key: Any | None = None<br>`                `) -> None|
 | :- |
 
 
 <table><tr><th colspan="3" valign="top"><b>Parameters</b></th></tr>
 <tr><td rowspan="4" valign="top"><b>min_support_percentage_number_table</b></td><td valign="top">Datatype</td><td valign="top">Float</td></tr>
 <tr><td valign="top">Optional</td><td valign="top">Yes</td></tr>
-<tr><td valign="top">Default Value</td><td valign="top">0\.0</td></tr>
+<tr><td valign="top">Default Value</td><td valign="top">0.0</td></tr>
 <tr><td valign="top">Description</td><td valign="top"><p>If the provided value for this attribute is greater than 0.0, then that percentage of the total number of rows will be used as minimum support count for constructing the number table.</p><p>If not provided, then min support count = 1 will be used for constructing the number table.</p></td></tr>
 <tr><td rowspan="4" valign="top"><b>min_support_count</b></td><td valign="top">Datatype</td><td valign="top">Integer</td></tr>
 <tr><td valign="top">Optional</td><td valign="top">Yes</td></tr>
@@ -141,7 +139,7 @@ The prototype and description of this method is given below.
 <tr><td valign="top">Description</td><td valign="top"><p>If provided, this value will be used as the minimum support count for generating FCPs and Association Rules.</p><p>If min support percentage for number table is not provided, then this min support count will be used for constructing the number table as well.</p><p></p><p>This value will also be embedded within the file names of the generated files.</p></td></tr>
 <tr><td rowspan="4" valign="top"><b>min_confidence</b></td><td valign="top">Datatype</td><td valign="top">Float</td></tr>
 <tr><td valign="top">Optional</td><td valign="top">Yes</td></tr>
-<tr><td valign="top">Default Value</td><td valign="top">0\.0</td></tr>
+<tr><td valign="top">Default Value</td><td valign="top">0.0</td></tr>
 <tr><td valign="top">Description</td><td valign="top"><p>This value will be used as minimum confidence for generating the association rules.</p><p>This value will also be embedded within the file names of the association rule files.</p></td></tr>
 <tr><td rowspan="4" valign="top"><b>produce_intermediate_imgs</b></td><td valign="top">Datatype</td><td valign="top">Boolean</td></tr>
 <tr><td valign="top">Optional</td><td valign="top">Yes</td></tr>
@@ -167,41 +165,41 @@ A directory named ‘output’ is created in the same directory as the input fil
 
 These are the results:
 
-`      `Here, x is the minimum support count (integer) and y is the minimum confidence value (float).
+  Here, x is the minimum support count (integer) and y is the minimum confidence value (float).
 
 - Triclusters:
   - Encoded version is stored in these files:
-    - <input file name>.triclusters.ms=x.encoded.csv
+    - < input file name>.triclusters.ms=x.encoded.csv
     - < input file name>.triclusters.ms=x.encoded.json
   - Decoded version is stored in the following file:
     - < input file name>.triclusters.ms=x.decoded.csv
 - Association Rules:
   - Encoded version of exact association rules is stored in:
-    - <input file name>.rule.E.ms=x.mc=y.encoded.csv
-    - <input file name>.rule.E.ms=x.mc=y.encoded.json
+    - < input file name>.rule.E.ms=x.mc=y.encoded.csv
+    - < input file name>.rule.E.ms=x.mc=y.encoded.json
   - Decoded version of exact association rules is stored in:
-    - <input file name>.rule.E.ms=x.mc=y.decoded.csv
+    - < input file name>.rule.E.ms=x.mc=y.decoded.csv
   - Encoded version of approximate association rules is stored in:
-    - <input file name>.rule.SB.ms=x.mc=y.encoded.csv
-    - <input file name>.rule.SB.ms=x.mc=y.encoded.json
+    - < input file name>.rule.SB.ms=x.mc=y.encoded.csv
+    - < input file name>.rule.SB.ms=x.mc=y.encoded.json
   - Decoded version of approximate association rules is stored in:
-    - <input file name>.rule.SB.ms=x.mc=y.decoded.csv
-  - `	`Encoded version of proper base approximate association rules is stored in:
-    - <input file name>.rule.PB.ms=x.mc=y.encoded.csv
-    - <input file name>.rule.PB.ms=x.mc=y.encoded.json
+    - < input file name>.rule.SB.ms=x.mc=y.decoded.csv
+  - Encoded version of proper base approximate association rules is stored in:
+    - < input file name>.rule.PB.ms=x.mc=y.encoded.csv
+    - < input file name>.rule.PB.ms=x.mc=y.encoded.json
   - Decoded version of proper base approximate association rules is stored in:
 
-`		`<input file name>.rule.PB.ms=x.mc=y.decoded.csv
+    - < input file name>.rule.PB.ms=x.mc=y.decoded.csv
 
-- Generator Closure Pairs:
-  - <input file name>.generators.ms=x.csv
-- Suffix Forest:
-  - <input file name>.forest.ms=x.encoded.json
-  - The intermediate and final image of the forest are also generated if produce\_final\_img and produce\_intermediate\_imgs flags are set. They are stored in files:
-    - <input file name>.forest.final.png
-    - <input file name>.forest.intermediate<step count>.png
-- Number Table:
-  - The number table or the item name to item number mapping is also generated and stored in the file <input file name>.number\_table.ms=x.csv
+  - Generator Closure Pairs:
+    - < input file name>.generators.ms=x.csv
+  - Suffix Forest:
+    - < input file name>.forest.ms=x.encoded.json
+    - The intermediate and final image of the forest are also generated if produce\_final\_img and produce\_intermediate\_imgs flags are set. They are stored in files:
+    - < input file name>.forest.final.png
+    - < input file name>.forest.intermediate<step count>.png
+  - Number Table:
+    - The number table or the item name to item number mapping is also generated and stored in the file < input file name>.number\_table.ms=x.csv
 
 
 **7. References:**
